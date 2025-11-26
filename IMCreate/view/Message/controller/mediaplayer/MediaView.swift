@@ -208,7 +208,7 @@ class MediaView: UIView {
     
     private func setupVideoPlayer(videoURL:URL){
         _videoURL = videoURL.absoluteString;
-        if !videoURL.absoluteString.hasSuffix("mp4") {
+        if !videoURL.absoluteString.hasSuffix("mp4") && !videoURL.absoluteString.hasSuffix("mov"){
             return;
         }
         guard let url = AppDownloader.shared.cache(forURL: videoURL.absoluteString) else {
