@@ -253,7 +253,7 @@ class IMMultiMessageCell: UITableViewCell, ImageDataSource {
         
         guard let vc = viewController else { return ; }
         
-        var index = 0;
+        var index = -1;
         var sourceView = self.largeImageView;
         
         let location = gesture.location(in: self.contentView);
@@ -266,6 +266,9 @@ class IMMultiMessageCell: UITableViewCell, ImageDataSource {
         else if self.thirdImageView.frame.contains(location) {
             index = 2;
             sourceView = self.thirdImageView;
+        }
+        if index == -1 {
+            return;
         }
         
         let imageCarousel = PreviewViewController(
@@ -317,7 +320,7 @@ class IMMultiMessageCell: UITableViewCell, ImageDataSource {
         c.isActive = true
         
         let maxHeight = UIScreen.main.bounds.height / 2.5;
-        let maxWidth = UIScreen.main.bounds.width - avatarSize - 10 - 10 - 10;
+        let maxWidth = UIScreen.main.bounds.width - avatarSize - 10 - 20 - 10;
         let screenWidth = UIScreen.main.bounds.width;
         let leftX:CGFloat = avatarSize + 10 + 10 + 10;
         

@@ -261,7 +261,7 @@ extension IMChatController: UITableViewDataSource, UITableViewDelegate {
         let message = self.messages[indexPath.row];
         if message.medias.count > 0 {
             let maxHeight = UIScreen.main.bounds.height / 2.5;
-            let maxWidth = UIScreen.main.bounds.width - IMMultiMessageCell.kAvatarSize - 10 - 10 - 10;
+            let maxWidth = UIScreen.main.bounds.width - IMMultiMessageCell.kAvatarSize - 10 - 20 - 10;
             var containerMaxSize = CGSize(width: maxWidth, height: maxHeight);
             if message.medias.count == 1 {
                 if message.medias[0].height < containerMaxSize.height {
