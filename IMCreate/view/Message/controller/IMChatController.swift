@@ -312,8 +312,8 @@ extension IMChatController: UITableViewDataSource, UITableViewDelegate {
                 let height0 = ccs[0].height;
                 let width0 = ccs[0].width;
                 
-                var height_1:CGFloat = height0 * (ccs[1].height/(ccs[1].height + ccs[2].height));
-                var height_2:CGFloat = height0 * (ccs[2].height/(ccs[1].height + ccs[2].height));
+                let height_1:CGFloat = height0 * (ccs[1].height/(ccs[1].height + ccs[2].height));
+                let height_2:CGFloat = height0 * (ccs[2].height/(ccs[1].height + ccs[2].height));
                 
                 var width_1:CGFloat = height_1 * ccs[1].width/ccs[1].height;
                 var width_2:CGFloat = height_2 * ccs[2].width/ccs[2].height;

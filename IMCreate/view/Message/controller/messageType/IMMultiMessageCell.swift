@@ -284,8 +284,13 @@ class IMMultiMessageCell: UITableViewCell {
         } else if message.medias.count == 2 {
             let image1 = message.medias[0];
             let image2 = message.medias[1];
+            
+            let width1 = image1.width;
+            let height1 = image1.height;
+            
             let height2 = image1.height;
             let width2 = image2.width * height2 / image2.height;
+            
             if height2 < containerMaxSize.height {
                 containerMaxSize.height = height2;
             }
@@ -293,14 +298,14 @@ class IMMultiMessageCell: UITableViewCell {
             let sh = height2;
             let xs = AVMakeRect(aspectRatio: .init(width: sw, height: sh), insideRect: .init(origin: .zero, size: containerMaxSize));
             
-            self.largeImageView.frame = .init(x: screenWidth - leftX - (xs.width), y: 10, width: image1.width / sw * (xs.width), height: xs.height)
+            self.largeImageView.frame = .init(x: screenWidth - leftX - (xs.width), y: 10, width: width1 / sw * (xs.width), height: xs.height)
             self.largeImageView.imageURL = message.medias[0].imageURL;
             self.largeImageView.setVideoSource(videoURL: message.medias[0].videoURL, audioEnabled: false);
             self.largeImageView.layer.cornerRadius = 12;
             self.largeImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
             self.largeImageView.clipsToBounds = true;
             
-            self.secondImageView.frame = .init(x:  self.largeImageView.frame.maxX, y: 10, width: (1 - image1.width / sw) * (xs.width), height: xs.height)
+            self.secondImageView.frame = .init(x:  self.largeImageView.frame.maxX, y: 10, width: width2 / sw * (xs.width), height: xs.height)
             self.secondImageView.imageURL = message.medias[1].imageURL;
             self.secondImageView.setVideoSource(videoURL: message.medias[1].videoURL, audioEnabled: false);
             self.secondImageView.layer.cornerRadius = 12;
@@ -336,8 +341,8 @@ class IMMultiMessageCell: UITableViewCell {
             let height0 = ccs[0].height;
             let width0 = ccs[0].width;
             
-            var height_1:CGFloat = height0 * (ccs[1].height/(ccs[1].height + ccs[2].height));
-            var height_2:CGFloat = height0 * (ccs[2].height/(ccs[1].height + ccs[2].height));
+            let height_1:CGFloat = height0 * (ccs[1].height/(ccs[1].height + ccs[2].height));
+            let height_2:CGFloat = height0 * (ccs[2].height/(ccs[1].height + ccs[2].height));
             
             var width_1:CGFloat = height_1 * ccs[1].width/ccs[1].height;
             var width_2:CGFloat = height_2 * ccs[2].width/ccs[2].height;
@@ -369,14 +374,14 @@ class IMMultiMessageCell: UITableViewCell {
             self.secondImageView.imageURL = image2.imageURL;
             self.secondImageView.setVideoSource(videoURL: image2.videoURL, audioEnabled: false);
             self.secondImageView.layer.cornerRadius = 12;
-            self.largeImageView.layer.maskedCorners = [.layerMinXMinYCorner]
+            self.secondImageView.layer.maskedCorners = [.layerMaxXMinYCorner]
             self.secondImageView.clipsToBounds = true;
             
             self.thirdImageView.frame = .init(x:  self.largeImageView.frame.maxX, y: self.secondImageView.frame.maxY, width: (1 - image1.width / sw) * (xs.width), height: xs.height*height_2/(height_1+height_2))
             self.thirdImageView.imageURL = image3.imageURL;
             self.thirdImageView.setVideoSource(videoURL: image3.videoURL, audioEnabled: false);
             self.thirdImageView.layer.cornerRadius = 12;
-            self.largeImageView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+            self.thirdImageView.layer.maskedCorners = [.layerMaxXMaxYCorner]
             self.thirdImageView.clipsToBounds = true;
         }
     }
