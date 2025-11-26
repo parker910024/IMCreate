@@ -362,18 +362,21 @@ class IMMultiMessageCell: UITableViewCell {
             self.largeImageView.imageURL = message.medias[0].imageURL;
             self.largeImageView.setVideoSource(videoURL: message.medias[0].videoURL, audioEnabled: false);
             self.largeImageView.layer.cornerRadius = 12;
+            self.largeImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
             self.largeImageView.clipsToBounds = true;
             
             self.secondImageView.frame = .init(x:  self.largeImageView.frame.maxX, y: 10, width: (1 - image1.width / sw) * (xs.width), height: xs.height * height_1/(height_1+height_2))
             self.secondImageView.imageURL = image2.imageURL;
             self.secondImageView.setVideoSource(videoURL: image2.videoURL, audioEnabled: false);
             self.secondImageView.layer.cornerRadius = 12;
+            self.largeImageView.layer.maskedCorners = [.layerMinXMinYCorner]
             self.secondImageView.clipsToBounds = true;
             
             self.thirdImageView.frame = .init(x:  self.largeImageView.frame.maxX, y: self.secondImageView.frame.maxY, width: (1 - image1.width / sw) * (xs.width), height: xs.height*height_2/(height_1+height_2))
             self.thirdImageView.imageURL = image3.imageURL;
             self.thirdImageView.setVideoSource(videoURL: image3.videoURL, audioEnabled: false);
             self.thirdImageView.layer.cornerRadius = 12;
+            self.largeImageView.layer.maskedCorners = [.layerMaxXMaxYCorner]
             self.thirdImageView.clipsToBounds = true;
         }
     }
