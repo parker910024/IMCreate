@@ -136,7 +136,28 @@ func parsePickerResult(_ results: [PHPickerResult]) -> [MediaItem] {
 
 
 
-class IMMultiMessageCell: UITableViewCell {
+class IMMultiMessageCell: UITableViewCell, ImageDataSource {
+    func numberOfImages() -> Int {
+        self.images.count;
+    }
+    
+    func imageItem(at index: Int) -> ImageItem {
+        return ImageItem.style(self.images[index]);
+    }
+    
+    func sourceView(at index: Int) -> MediaView? {
+        
+        if index == 0 {
+            self.largeImageView
+        }
+        else if index == 1 {
+            self.secondImageView
+        }
+        else {
+            self.thirdImageView
+        }
+    }
+    
     static let reuseIdentifier = "IMMultiMessageCell"
 
     private let avatarImageView = UIImageView()
@@ -223,8 +244,44 @@ class IMMultiMessageCell: UITableViewCell {
         contentView.addSubview(thirdImageView);
 
         contentView.layoutIfNeeded()
+        contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGesture(_:))))
     }
+    
+    weak var viewController:UIViewController?;
 
+    @objc func tapGesture(_ gesture:UITapGestureRecognizer){
+        
+        guard let vc = viewController else { return ; }
+        
+        var index = 0;
+        var sourceView = self.largeImageView;
+        
+        let location = gesture.location(in: self.contentView);
+        if self.largeImageView.frame.contains(location) {
+            index = 0;
+        } else if self.secondImageView.frame.contains(location) {
+            index = 1;
+            sourceView = self.secondImageView;
+        }
+        else if self.thirdImageView.frame.contains(location) {
+            index = 2;
+            sourceView = self.thirdImageView;
+        }
+        
+        let imageCarousel = PreviewViewController(
+            sourceView: sourceView,
+            imageDataSource: self,
+            imageLoader: SDWebImageLoader(),
+            options: [.theme(.light), .rightNavItemIcon(UIImage(), UIColor.black, onTap: { x in
+                
+            }), .closeIcon(UIImage(systemName: "arrowshape.turn.up.backward")!)],
+            initialIndex: index)
+        vc.present(imageCarousel, animated: true)
+    }
+    
+    var images:[MediaItem] = [];
+    
+    
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     override func prepareForReuse() {
@@ -281,6 +338,9 @@ class IMMultiMessageCell: UITableViewCell {
             self.largeImageView.setVideoSource(videoURL: message.medias[0].videoURL, audioEnabled: false);
             self.largeImageView.layer.cornerRadius = 12;
             self.largeImageView.clipsToBounds = true;
+            
+            self.images = message.medias;
+            
         } else if message.medias.count == 2 {
             let image1 = message.medias[0];
             let image2 = message.medias[1];
@@ -311,6 +371,8 @@ class IMMultiMessageCell: UITableViewCell {
             self.secondImageView.layer.cornerRadius = 12;
             self.secondImageView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
             self.secondImageView.clipsToBounds = true;
+            
+            self.images = message.medias;
             
         } else if message.medias.count == 3 {
             
@@ -362,10 +424,11 @@ class IMMultiMessageCell: UITableViewCell {
             let image2 = ccs[1];
             let image3 = ccs[2];
             
+            self.images = ccs;
             
             self.largeImageView.frame = .init(x: screenWidth - leftX - (xs.width), y: 10, width: image1.width / sw * (xs.width), height: xs.height)
-            self.largeImageView.imageURL = message.medias[0].imageURL;
-            self.largeImageView.setVideoSource(videoURL: message.medias[0].videoURL, audioEnabled: false);
+            self.largeImageView.imageURL = image1.imageURL;
+            self.largeImageView.setVideoSource(videoURL: image1.videoURL, audioEnabled: false);
             self.largeImageView.layer.cornerRadius = 12;
             self.largeImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
             self.largeImageView.clipsToBounds = true;

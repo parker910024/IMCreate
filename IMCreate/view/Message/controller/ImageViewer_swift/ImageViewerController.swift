@@ -107,8 +107,14 @@ class ImageViewerController:UIViewController, UIGestureRecognizerDelegate {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        guard let image = self.imageView.image else { return ; }
-        let frame = AVMakeRect(aspectRatio: image.size, insideRect: CGRect(origin: .zero, size: self.view.frame.size));
+        var size:CGSize = .init(width: 1, height: 1);
+        switch imageItem {
+        case .style(let img):
+            size = .init(width: img.width, height: img.height);
+        default:
+            break
+        }
+        let frame = AVMakeRect(aspectRatio: size, insideRect: CGRect(origin: .zero, size: self.view.frame.size));
         self.imageView.frame = frame;
         layout()
     }

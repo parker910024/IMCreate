@@ -339,6 +339,7 @@ extension IMChatController: UITableViewDataSource, UITableViewDelegate {
         let message = messages[indexPath.row]
         if message.medias.count > 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: IMMultiMessageCell.reuseIdentifier, for: indexPath) as! IMMultiMessageCell
+            cell.viewController = self;
             cell.configure(message:message, avatar: nil, readStatus: message.isOutgoing ? "未读" : nil)
             return cell
         }
