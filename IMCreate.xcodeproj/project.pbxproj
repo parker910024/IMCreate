@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172000D42ED74F0D003BBF2F /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172000CA2ED74F0D003BBF2F /* ImageItem.swift */; };
+		172000D52ED74F0D003BBF2F /* XImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172000CB2ED74F0D003BBF2F /* XImageLoader.swift */; };
+		172000D62ED74F0D003BBF2F /* ImageViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172000CC2ED74F0D003BBF2F /* ImageViewerController.swift */; };
+		172000D72ED74F0D003BBF2F /* ImageViewerOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172000CD2ED74F0D003BBF2F /* ImageViewerOption.swift */; };
+		172000D82ED74F0D003BBF2F /* ImageViewerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172000CE2ED74F0D003BBF2F /* ImageViewerTheme.swift */; };
+		172000D92ED74F0D003BBF2F /* ImageViewerTransitionPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172000CF2ED74F0D003BBF2F /* ImageViewerTransitionPresentationManager.swift */; };
+		172000DA2ED74F0D003BBF2F /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172000D02ED74F0D003BBF2F /* PreviewViewController.swift */; };
+		172000DB2ED74F0D003BBF2F /* UINavigationBar_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172000D12ED74F0D003BBF2F /* UINavigationBar_Extensions.swift */; };
+		172000DC2ED74F0D003BBF2F /* UIView_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172000D22ED74F0D003BBF2F /* UIView_Extensions.swift */; };
 		1720FD932ED72D77003BBF2F /* IMMultiMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720FD922ED72D77003BBF2F /* IMMultiMessageCell.swift */; };
 		1720FF1E2ED730FD003BBF2F /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720FF1D2ED730FD003BBF2F /* MediaView.swift */; };
 		1720FF202ED73163003BBF2F /* AppDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720FF1F2ED73163003BBF2F /* AppDownloader.swift */; };
@@ -69,6 +78,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		172000CA2ED74F0D003BBF2F /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		172000CB2ED74F0D003BBF2F /* XImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XImageLoader.swift; sourceTree = "<group>"; };
+		172000CC2ED74F0D003BBF2F /* ImageViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerController.swift; sourceTree = "<group>"; };
+		172000CD2ED74F0D003BBF2F /* ImageViewerOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerOption.swift; sourceTree = "<group>"; };
+		172000CE2ED74F0D003BBF2F /* ImageViewerTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerTheme.swift; sourceTree = "<group>"; };
+		172000CF2ED74F0D003BBF2F /* ImageViewerTransitionPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerTransitionPresentationManager.swift; sourceTree = "<group>"; };
+		172000D02ED74F0D003BBF2F /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		172000D12ED74F0D003BBF2F /* UINavigationBar_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar_Extensions.swift; sourceTree = "<group>"; };
+		172000D22ED74F0D003BBF2F /* UIView_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_Extensions.swift; sourceTree = "<group>"; };
 		1720FD922ED72D77003BBF2F /* IMMultiMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMMultiMessageCell.swift; sourceTree = "<group>"; };
 		1720FF1D2ED730FD003BBF2F /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 		1720FF1F2ED73163003BBF2F /* AppDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDownloader.swift; sourceTree = "<group>"; };
@@ -146,6 +164,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		172000D32ED74F0D003BBF2F /* ImageViewer_swift */ = {
+			isa = PBXGroup;
+			children = (
+				172000CA2ED74F0D003BBF2F /* ImageItem.swift */,
+				172000CB2ED74F0D003BBF2F /* XImageLoader.swift */,
+				172000CC2ED74F0D003BBF2F /* ImageViewerController.swift */,
+				172000CD2ED74F0D003BBF2F /* ImageViewerOption.swift */,
+				172000CE2ED74F0D003BBF2F /* ImageViewerTheme.swift */,
+				172000CF2ED74F0D003BBF2F /* ImageViewerTransitionPresentationManager.swift */,
+				172000D02ED74F0D003BBF2F /* PreviewViewController.swift */,
+				172000D12ED74F0D003BBF2F /* UINavigationBar_Extensions.swift */,
+				172000D22ED74F0D003BBF2F /* UIView_Extensions.swift */,
+			);
+			path = ImageViewer_swift;
+			sourceTree = "<group>";
+		};
 		1720FF1C2ED730F8003BBF2F /* mediaplayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +333,7 @@
 		84499B222ED4A13E002F6FE3 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				172000D32ED74F0D003BBF2F /* ImageViewer_swift */,
 				1720FF1C2ED730F8003BBF2F /* mediaplayer */,
 				84D1969D2ED5FCE200DCFB48 /* messageType */,
 				84499B192ED49E90002F6FE3 /* IMMessageListViewController.swift */,
@@ -507,9 +542,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-IMCreate/Pods-IMCreate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-IMCreate/Pods-IMCreate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -569,6 +608,15 @@
 				844999C82ED49942002F6FE3 /* IMMainTabBarController.swift in Sources */,
 				1720FF202ED73163003BBF2F /* AppDownloader.swift in Sources */,
 				84D196A12ED622DD00DCFB48 /* ImageLoader.swift in Sources */,
+				172000D42ED74F0D003BBF2F /* ImageItem.swift in Sources */,
+				172000D52ED74F0D003BBF2F /* XImageLoader.swift in Sources */,
+				172000D62ED74F0D003BBF2F /* ImageViewerController.swift in Sources */,
+				172000D72ED74F0D003BBF2F /* ImageViewerOption.swift in Sources */,
+				172000D82ED74F0D003BBF2F /* ImageViewerTheme.swift in Sources */,
+				172000D92ED74F0D003BBF2F /* ImageViewerTransitionPresentationManager.swift in Sources */,
+				172000DA2ED74F0D003BBF2F /* PreviewViewController.swift in Sources */,
+				172000DB2ED74F0D003BBF2F /* UINavigationBar_Extensions.swift in Sources */,
+				172000DC2ED74F0D003BBF2F /* UIView_Extensions.swift in Sources */,
 				84499B1C2ED49E9B002F6FE3 /* IMContactListViewController.swift in Sources */,
 				853BE9232ED55A78004A2A7D /* IMFunctionPanel.swift in Sources */,
 				84D196A52ED626D200DCFB48 /* IMImageMessageCell.swift in Sources */,

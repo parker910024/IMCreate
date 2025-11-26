@@ -8,7 +8,6 @@ target 'IMCreate' do
   pod 'GKNavigationBarViewController'
   pod 'JJException'
   pod 'SDWebImage'
-  pod 'ImageViewer.swift', '~> 3.3.8'
   
 end
 
