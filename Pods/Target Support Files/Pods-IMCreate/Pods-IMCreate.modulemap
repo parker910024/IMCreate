@@ -1,0 +1,6 @@
+framework module Pods_IMCreate {
+  umbrella header "Pods-IMCreate-umbrella.h"
+
+  export *
+  module * { export * }
+}
