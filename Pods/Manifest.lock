@@ -2,6 +2,7 @@ PODS:
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
   - GKNavigationBarViewController (3.0.2)
+  - ImageViewer.swift (3.3.8)
   - IQKeyboardManagerSwift (6.5.16)
   - JJException (0.2.13):
     - JJException/All (= 0.2.13)
@@ -32,6 +33,7 @@ PODS:
 DEPENDENCIES:
   - FCUUID
   - GKNavigationBarViewController
+  - ImageViewer.swift (~> 3.3.8)
   - IQKeyboardManagerSwift
   - JJException
   - SDWebImage
@@ -41,6 +43,7 @@ SPEC REPOS:
   trunk:
     - FCUUID
     - GKNavigationBarViewController
+    - ImageViewer.swift
     - IQKeyboardManagerSwift
     - JJException
     - SDWebImage
@@ -50,12 +53,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   GKNavigationBarViewController: f1fe00cbe0e3693d072b4d565e6791bc71ba71d7
+  ImageViewer.swift: 284cd8127d31af8e5938674fb9f8e695a4cdf6c6
   IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
   JJException: fce490b5c046078709283d38de73fe2f624bc14c
   SDWebImage: 9f177d83116802728e122410fb25ad88f5c7608a
   SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
 
-PODFILE CHECKSUM: 6ce3ccaca2797c34bca13ca855d71c67a0af89d8
+PODFILE CHECKSUM: e6e8a16a1a0c875fbd90cb099eab00ee250c8016
 
 COCOAPODS: 1.16.2

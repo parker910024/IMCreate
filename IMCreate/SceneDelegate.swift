@@ -15,6 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
 
+        AppDownloader.shared.setup();
+        
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = IMMainTabBarController()
         window?.makeKeyAndVisible()

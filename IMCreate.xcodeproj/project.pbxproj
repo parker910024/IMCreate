@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1720FD932ED72D77003BBF2F /* IMMultiMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720FD922ED72D77003BBF2F /* IMMultiMessageCell.swift */; };
+		1720FF1E2ED730FD003BBF2F /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720FF1D2ED730FD003BBF2F /* MediaView.swift */; };
+		1720FF202ED73163003BBF2F /* AppDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720FF1F2ED73163003BBF2F /* AppDownloader.swift */; };
 		844999B52ED49419002F6FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844999AC2ED49419002F6FE3 /* AppDelegate.swift */; };
 		844999B82ED49419002F6FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844999B32ED49419002F6FE3 /* SceneDelegate.swift */; };
 		844999B92ED49419002F6FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844999AD2ED49419002F6FE3 /* Assets.xcassets */; };
@@ -66,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1720FD922ED72D77003BBF2F /* IMMultiMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMMultiMessageCell.swift; sourceTree = "<group>"; };
+		1720FF1D2ED730FD003BBF2F /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
+		1720FF1F2ED73163003BBF2F /* AppDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDownloader.swift; sourceTree = "<group>"; };
 		68486983476A127FF9CC7580 /* Pods_IMCreate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMCreate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D99E9C256D6AB049CC0A8EE /* Pods-IMCreate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMCreate.release.xcconfig"; path = "Target Support Files/Pods-IMCreate/Pods-IMCreate.release.xcconfig"; sourceTree = "<group>"; };
 		844999792ED49412002F6FE3 /* IMCreate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMCreate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +146,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1720FF1C2ED730F8003BBF2F /* mediaplayer */ = {
+			isa = PBXGroup;
+			children = (
+				1720FF1D2ED730FD003BBF2F /* MediaView.swift */,
+				1720FF1F2ED73163003BBF2F /* AppDownloader.swift */,
+			);
+			path = mediaplayer;
+			sourceTree = "<group>";
+		};
 		566DCD80257269D6FD7A7D2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +299,7 @@
 		84499B222ED4A13E002F6FE3 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				1720FF1C2ED730F8003BBF2F /* mediaplayer */,
 				84D1969D2ED5FCE200DCFB48 /* messageType */,
 				84499B192ED49E90002F6FE3 /* IMMessageListViewController.swift */,
 				853BE91B2ED556B9004A2A7D /* IMChatController.swift */,
@@ -328,6 +344,7 @@
 				84D1969E2ED5FCEE00DCFB48 /* IMTextMessageCell.swift */,
 				84D196A22ED6230E00DCFB48 /* ImageCollectionViewCell.swift */,
 				84D196A42ED626D200DCFB48 /* IMImageMessageCell.swift */,
+				1720FD922ED72D77003BBF2F /* IMMultiMessageCell.swift */,
 				84D196A02ED622DD00DCFB48 /* ImageLoader.swift */,
 			);
 			path = messageType;
@@ -550,15 +567,18 @@
 				84499B342ED4C863002F6FE3 /* IMTopBannerView.swift in Sources */,
 				84499B202ED49EAE002F6FE3 /* IMMineViewController.swift in Sources */,
 				844999C82ED49942002F6FE3 /* IMMainTabBarController.swift in Sources */,
+				1720FF202ED73163003BBF2F /* AppDownloader.swift in Sources */,
 				84D196A12ED622DD00DCFB48 /* ImageLoader.swift in Sources */,
 				84499B1C2ED49E9B002F6FE3 /* IMContactListViewController.swift in Sources */,
 				853BE9232ED55A78004A2A7D /* IMFunctionPanel.swift in Sources */,
 				84D196A52ED626D200DCFB48 /* IMImageMessageCell.swift in Sources */,
 				84499B182ED49E7B002F6FE3 /* IMBaseViewController.swift in Sources */,
 				84499B292ED4A196002F6FE3 /* IMMiniAppContainerTableViewCell.swift in Sources */,
+				1720FF1E2ED730FD003BBF2F /* MediaView.swift in Sources */,
 				853BE91C2ED556B9004A2A7D /* IMChatController.swift in Sources */,
 				84499B2D2ED4AC29002F6FE3 /* IMFloatingBadgeView.swift in Sources */,
 				84499B2F2ED4AC4F002F6FE3 /* IMFloatManager.swift in Sources */,
+				1720FD932ED72D77003BBF2F /* IMMultiMessageCell.swift in Sources */,
 				84499B3B2ED4CB9E002F6FE3 /* IMMiniAppsCell.swift in Sources */,
 				844999B82ED49419002F6FE3 /* SceneDelegate.swift in Sources */,
 			);
@@ -617,6 +637,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BX9U77G23;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IMCreate/Info.plist;
@@ -632,7 +653,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dns.IMCreate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dns.x.IMCreate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "IMCreate/model/IMCreate-Bridging-Header.h";
@@ -651,6 +672,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BX9U77G23;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IMCreate/Info.plist;
@@ -666,7 +688,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dns.IMCreate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dns.x.IMCreate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "IMCreate/model/IMCreate-Bridging-Header.h";
